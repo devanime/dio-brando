@@ -1,0 +1,3 @@
+/* jshint ignore:start */
+}(window.dataLayer = window.dataLayer || [], window.Estarossa, window.lodash, jQuery, window, document));
+/* jshint ignore:end */

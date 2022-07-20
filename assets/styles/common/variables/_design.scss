@@ -1,0 +1,12 @@
+$container-max-width: var(--global__sizing__container-max-width, 1230px) !default;
+$heading-sizes: (
+    default: --headings__default,
+    medium: --headings__medium,
+    large: --headings__large,
+    xlarge: --headings__xlarge
+) !default;
+$font-family-headings: inherit !default;
+$button-styles: (default, secondary, inverted) !default;
+$image-inline-spacing: var(--global__sizing__text-spacing--default) !default;
+$buttons-disabled-opacity: 0.75 !default;
+$first-section-margin-top: var(--global__sizing__layout-spacing--default) !default;

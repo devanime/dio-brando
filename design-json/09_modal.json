@@ -1,0 +1,39 @@
+{
+    "name": "modal",
+    "title": "Design: Modal",
+    "sections": {
+        "common": "Common",
+        "box": "Boxed Modal"
+    },
+    "fields": {
+        "container-background": {
+            "type" : "color-selection",
+            "default" : "white",
+            "description" : "The background color of the modal container."
+        },
+        "text-color": {
+            "type" : "color-selection",
+            "default" : "black",
+            "description" : "The background color of the modal container."
+        },
+        "text-align": {
+            "type": "radio",
+            "default" : "center",
+            "description" : "The text alignment of the modal's content.",
+            "choices" : {
+                "center" : "Center",
+                "left" : "Left",
+                "right" : "Right"
+            }
+        },
+        "close-color": {
+            "type" : "color-selection",
+            "description" : "The color of the close modal icon"
+        },
+        "background": {
+            "type" : "color-selection",
+            "section" : "box",
+            "description" : "The background color of the modal visible on BOX setting."
+        }
+    }
+}

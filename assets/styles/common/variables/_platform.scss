@@ -1,0 +1,94 @@
+/********************
+Estarossa Components
+********************/
+
+// Nav Menu
+$nav-menu-responsive-breakpoint: $screen-md !default;
+$nav-menu-toggle-font-size: 1em !default;
+$nav-menu-toggle-padding: 0.25em !default;
+$nav-menu-toggle-color: inherit !default;
+$nav-menu-toggle-color-hover: $nav-menu-toggle-color !default;
+$nav-menu-toggle-bar-color: color-var(--header__nav-menu__toggle-bar-color) !default;
+$nav-menu-toggle-bar-color-hover: $nav-menu-toggle-bar-color !default;
+$nav-menu-toggle-bar-width: var(--header__nav-menu__toggle-bar-width) !default;
+$nav-menu-toggle-bar-height: var(--header__nav-menu__toggle-bar-height) !default;
+$nav-menu-toggle-bar-spacing: var(--header__nav-menu__toggle-bar-spacing) !default;
+$nav-menu-toggle-bar-first-position: negate-var(--header__nav-menu__toggle-bar-spacing) !default;
+$nav-menu-toggle-bar-last-position: var(--header__nav-menu__toggle-bar-spacing) !default;
+$nav-menu-toggle-bar-border-radius: var(--header__nav-menu__toggle-bar-radius) !default;
+$nav-menu-toggle-height-computed: ceil($nav-menu-toggle-font-size * 1.01) !default;
+
+// wait for JS nav-menu work
+$nav-menu-toggle-position: left !default;
+
+$nav-menu-toggle-label-text-transform: var(--header__nav-menu__toggle-label-transform) !default;
+$nav-menu-overlay-bg: color-var(--header__nav-menu__overlay-bg) !default;
+$nav-menu-overlay-color: color-var(--header__nav-menu__overlay-color) !default;
+$nav-menu-overlay-padding-v: var(--header__nav-menu__padding-vertical) !default;
+$nav-menu-overlay-padding-h: var(--header__nav-menu__padding-horizontal) !default;
+$nav-menu-overlay-z-index: 9990 !default;
+$nav-menu-list-link-padding-v: var(--global__sizing__text-spacing--half) !default;
+$nav-menu-list-link-padding-h: var(--global__sizing__text-spacing--default) !default;
+$nav-menu-list-link-padding: $nav-menu-list-link-padding-v $nav-menu-list-link-padding-h !default;
+$nav-menu-item-color: color-var(--global__body__color) !default;
+$nav-menu-item-color-hover: color-var(--global__links__color) !default;
+$nav-menu-item-open-color: inherit !default;
+$nav-menu-current-item-color: inherit !default;
+$nav-menu-sub-list-font-size: var(--header__nav-menu__sub-list-size) !default;
+$nav-menu-sub-list-open-font-size: var(--header__nav-menu__sub-list-size) !default;
+$nav-menu-sub-list-handle-font-size: 1em !default;
+$nav-menu-sub-list-handle-font-weight: 400 !default;
+$nav-menu-sub-list-item-color: inherit !default;
+$nav-menu-sub-list-item-color-hover: $nav-menu-sub-list-item-color !default;
+$nav-menu-sub-list-item-open-color: inherit !default;
+
+// Stream Selector
+$sd-ss-dropdown-font: $font-family-base !default;
+$sd-ss-dropdown-toggle-bg: $primary !default;
+$sd-ss-cta-extend: ("button", "button--block") !default;
+
+// Modal
+$modal-container-breakpoint: $screen-md !default;
+$modal-container-box-breakpoint: $screen-lg !default;
+$modal-container-bg: color-var(--modal__common__container-background) !default;
+$modal-container-color: color-var(--modal__common__text-color) !default;
+$modal-text-align: var(--modal__common__text-align) !default;
+$modal-bg-color: color-var(--modal__common__background) !default;
+$modal-box-bg-color: color-var(--modal__box__background, 0.7) !default;
+$modal-close-color: color-var(--modal__common__close-color) !default;
+
+//Icons/Social Icons
+$si-icon-svg-size: 1.25em !default;
+$si-alignment: inherit !default;
+$si-list-item-color: inherit !default;
+
+//Video
+$video-play-circle-color: color-var(--global__colors__primary, 0.8) !default;
+
+$spinner-color-faded: color-var(--global__colors__primary, 0.3) !default;
+
+//Media Carousel
+$media-carousel-nav-color-hover: color-var(--global__colors__primary, 0.8) !default;
+$media-carousel-caption-bg-faded: color-var(--global__colors__primary, 0.85) !default;
+
+
+
+/*********************
+Other Platform Plugins
+(Ticket Calendar,
+VC Library, etc.)
+*********************/
+
+$vc-bg-dark: color-var(--global__colors__black) !default;
+$vc-bg-dark-contrast: color-var(--global__colors__white) !default;
+
+// Fluid margins below sections (mobile, desktop)
+$vc-section-margin: (var(--global__sizing__layout-spacing--default), var(--global__sizing__layout-spacing--half), var(--global__sizing__layout-spacing--double)) !default;
+
+// Fluid margins below rows (mobile, desktop)
+$vc-row-margin: $vc-section-margin !default;
+
+// Fluid margins below elements/components (mobile, desktop)
+$vc-component-margin: (var(--global__sizing__text-spacing--default), var(--global__sizing__text-spacing--half), var(--global__sizing__text-spacing--double)) !default;
+
+

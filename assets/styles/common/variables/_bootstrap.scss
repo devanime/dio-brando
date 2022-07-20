@@ -1,0 +1,74 @@
+/**************
+Bootstrap Setup
+- Global
+**************/
+
+// Colors
+$primary:           color-var(--global__colors__primary) !default;
+$body-bg:           color-var(--global__body__background) !default;
+$body-color:        color-var(--global__body__color) !default;
+$black:             color-var(--global__colors__black) !default;
+
+// Fonts
+
+$font-family-sans-serif:      Helvetica Neue, Arial, sans-serif !default;
+$font-family-base:            $font-family-sans-serif !default;
+$font-size-base:              var(--body__default__font-size--default) !default;
+$font-weight-base:            normal !default;
+$line-height-base:            var(--global__body__line-height) !default;
+
+// Links
+
+$link-color:                color-var(--global__links__color) !default;
+$link-decoration:           var(--global__links__decoration) !default;
+$link-hover-color:          color-var(--global__links__color-hover) !default;
+$link-hover-decoration:     var(--global__links__decoration-hover) !default;
+
+
+// Miscellaneous - required for reboot and mixins
+
+$table-cell-padding:                var(--global__sizing__text-spacing--default) !default;
+$table-caption-color:               inherit !default;
+$label-margin-bottom:               var(--global__sizing__text-spacing--half) !default;
+$headings-margin-bottom:            var(--global__sizing__text-spacing--default) !default;
+$paragraph-margin-bottom:           var(--global__sizing__text-spacing--default) !default;
+$dt-font-weight:                    bold !default;
+$displays:                          none, inline, inline-block, block, flex !default;
+
+/**************
+Bootstrap Setup
+- Grid
+**************/
+
+$screen-xs: 0 !default;
+$screen-sm: 576px !default;
+$screen-md: 768px !default;
+$screen-lg: 992px !default;
+$screen-xl: 1200px !default;
+
+$grid-breakpoints: (
+    xs: $screen-xs,
+    sm: $screen-sm,
+    md: $screen-md,
+    lg: $screen-lg,
+    xl: $screen-xl
+) !default;
+$grid-columns:                12 !default;
+$grid-gutter-width:           var(--global__sizing__layout-spacing--default) !default;
+$grid-gutter-width-half:      var(--global__sizing__layout-spacing--half) !default;
+
+
+$container-max-widths: (
+    sm: 100%,
+    md: 100%,
+    lg: 100%,
+    xl: 100%
+) !default;
+
+$spacers: (
+    0: 0,
+    quarter: var(--global__sizing__text-spacing--quarter),
+    half: var(--global__sizing__text-spacing--half),
+    default: var(--global__sizing__text-spacing--default),
+    double: var(--global__sizing__text-spacing--double)
+)

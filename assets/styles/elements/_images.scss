@@ -1,0 +1,56 @@
+// Images
+
+.alignnone {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+.aligncenter {
+    display: block;
+    margin: $image-inline-spacing auto;
+    height: auto;
+}
+
+.alignleft,
+.alignright {
+    margin-bottom: $image-inline-spacing;
+    height: auto;
+}
+
+@include media-breakpoint-up(md) {
+    // Only float if not on a small device
+    .alignleft {
+        float: left;
+        margin-right: $image-inline-spacing;
+    }
+    .alignright {
+        float: right;
+        margin-left: $image-inline-spacing;
+    }
+}
+
+img.full-width-image,
+.full-width-image > img {
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+// Captions
+.wp-caption {
+    padding: var(--block-text__images__padding);
+    background-color: color-var(--block-text__images__background-color);
+    color: color-var(--block-text__images__caption-color);
+    @include border(--block-text__images__border);
+    max-width: 100%;
+    height: auto;
+}
+
+.wp-caption-text {
+    font-size: var(--block-text__images__font-size);
+}

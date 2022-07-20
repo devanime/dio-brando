@@ -1,0 +1,93 @@
+{
+    "name": "block-text",
+    "title": "Design: Block Text",
+    "sections": {
+        "block-quotes": "Block Quotes",
+        "lists": "Lists",
+        "images": "Images with Caption"
+    },
+    "fields": {
+        "horizontal-padding" : {
+            "section" : "block-quotes",
+            "description": "(1em = 1x font size)",
+            "default" : "0.5em",
+            "choices": {
+                "em-range": [0, 5, 0.5]
+            }
+        },
+        "size": {
+            "type": "heading-size",
+            "section" : "block-quotes",
+            "description" : "Set the font size of the quotation, using defined heading sizes",
+            "default" : "medium"
+        },
+        "caption-weight" : {
+            "type" : "radio",
+            "section" : "block-quotes",
+            "description" : "Set the font weight for caption",
+            "default" : "normal",
+            "choices" : {
+                "normal" : "Normal",
+                "bold" : "Bold"
+            }
+        },
+        "caption-style" : {
+            "type" : "radio",
+            "section" : "block-quotes",
+            "description" : "Set the font style for captions",
+            "default" : "italic",
+            "choices" : {
+                "normal" : "Normal",
+                "italic" : "Italic"
+            }
+        },
+        "list-left-padding" : {
+            "section" : "lists",
+            "description" : "Left padding on default lists",
+            "default" : "40px",
+            "choices" : {
+                "pixel-range" : [0, 40, 10]
+            }
+        },
+        "item-inline-spacing-horizontal" : {
+            "label": "Inline List Item Spacing",
+            "section" : "lists",
+            "description" : "Horizontal spacing between INLINE list item<br>(1em = 1x font size)",
+            "default" : "0.5em",
+            "choices" : {
+                "em-range" : [0.25, 2, 0.25]
+            }
+        },
+        "padding" : {
+            "section" : "images",
+            "default" : "0.5em",
+            "choices": {
+                "em-range": [0.5, 3, 0.25]
+            }
+        },
+        "background-color" : {
+            "type": "color-selection",
+            "section" : "images",
+            "description" : "The background color of images when caption exists."
+        },
+        "border": {
+            "label": "Caption Border",
+            "type": "border",
+            "section" : "images"
+        },
+        "caption-color" : {
+            "type" : "color-selection",
+            "section" : "images",
+            "description" : "Caption text color"
+        },
+        "font-size": {
+            "label": "Caption Font Size",
+            "type": "fluid-value",
+            "section": "images",
+            "default": "12px",
+            "choices": {
+                "pixel-range": [8, 18, 1]
+            }
+        }
+    }
+}

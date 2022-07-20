@@ -1,0 +1,163 @@
+{
+    "name": "global",
+    "title": "Design: Global",
+    "sections": {
+        "sizing": "Sizing",
+        "colors": "Colors",
+        "body": "Body",
+        "links": "Links"
+    },
+    "fields": {
+        "spacer-root": {
+            "type": "spacer-root",
+            "section": "sizing",
+            "label": "Spacing Enlargement",
+            "description": "Factor for how spacing should increase on desktop",
+            "default": 1,
+            "choices": {
+                "range": [1, 2, 0.25, "%sx", true]
+            }
+        },
+        "layout-spacing": {
+            "type": "spacing",
+            "section": "sizing",
+            "description": "Default mobile spacing between sections, rows and columns",
+            "default": "20px",
+            "choices": {
+                "pixel-range": [10, 75, 5]
+            }
+        },
+        "text-spacing": {
+            "type": "spacing",
+            "section": "sizing",
+            "description": "Default mobile spacing between paragraphs, headings, images, etc.",
+            "default": "10px",
+            "choices": {
+                "pixel-range": [10, 60, 5]
+            }
+        },
+        "container-width": {
+            "type": "container-width",
+            "section": "sizing",
+            "description": "Maximum width of content on desktop",
+            "default": "1200px",
+            "choices": {
+                "pixel-range": [1000, 1600, 25]
+            }
+        },
+        "primary": {
+            "type": "color",
+            "section": "colors",
+            "default": "#007BFF"
+        },
+        "primary-dark": {
+            "type": "color",
+            "section": "colors",
+            "default": "#0055D9"
+        },
+        "primary-light": {
+            "type": "color",
+            "section": "colors",
+            "default": "#26A1FF"
+        },
+        "secondary": {
+            "type": "color",
+            "section": "colors",
+            "default": "#DB0322"
+        },
+        "secondary-dark": {
+            "type": "color",
+            "section": "colors",
+            "default": "#B50000"
+        },
+        "secondary-light": {
+            "type": "color",
+            "section": "colors",
+            "default": "#FF2948"
+        },
+        "gray-darker": {
+            "type": "color",
+            "section": "colors",
+            "default": "#222222"
+        },
+        "gray-dark": {
+            "type": "color",
+            "section": "colors",
+            "default": "#555555"
+        },
+        "gray-medium": {
+            "type": "color",
+            "section": "colors",
+            "default": "#999999"
+        },
+        "gray-light": {
+            "type": "color",
+            "section": "colors",
+            "default": "#CCCCCC"
+        },
+        "gray-lighter": {
+            "type": "color",
+            "section": "colors",
+            "default": "#EEEEEE"
+        },
+        "white": {
+            "type": "color",
+            "section": "colors",
+            "default": "#FFFFFF"
+        },
+        "black": {
+            "type": "color",
+            "section": "colors",
+            "default": "#000000"
+        },
+        "body-color": {
+            "name": "color",
+            "type": "color-selection",
+            "section": "body",
+            "description": "Default color for all text",
+            "default": "gray-darker"
+        },
+        "body-color-inverted": {
+            "name": "color-inverted",
+            "type": "color-selection",
+            "section": "body",
+            "description": "Text color used when on a contrasting background color",
+            "default": "white"
+        },
+        "body-background": {
+            "name": "background",
+            "type": "color-selection",
+            "section": "body",
+            "description": "Default background color for content",
+            "default": "white"
+        },
+        "line-height": {
+            "section": "body",
+            "description": "Default line height (leading) for all content",
+            "default": "1.5",
+            "choices": {
+                "range": [1, 2, 0.05]
+            }
+        },
+        "link-color": {
+            "name": "color",
+            "type": "color-selection",
+            "section": "links",
+            "description": "Default color for all links",
+            "default": "primary"
+        },
+        "link-color-hover": {
+            "name": "color-hover",
+            "type": "color-selection",
+            "section": "links",
+            "description": "Link color on mouse hover",
+            "default": "primary-dark"
+        },
+        "underline-behavior": {
+            "type": "underline-behavior",
+            "section": "links",
+            "description": "Set how link underlines behave on hover",
+            "default": "hover"
+        }
+    }
+}

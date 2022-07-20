@@ -1,0 +1,45 @@
+
+%button,
+.button {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    line-height: 1;
+    text-decoration: none;
+    font-family: inherit;
+    font-weight: bold;
+    padding: var(--buttons__common__padding-vertical) var(--buttons__common__padding-horizontal);
+    @include border(--buttons__common__border);
+    @include transition(all);
+    @include fluid-value-set(font-size, --buttons__common__font-size);
+    &:hover {
+        text-decoration: none;
+    }
+    &:disabled,
+    &--disabled{
+        opacity: $buttons-disabled-opacity;
+    }
+    &--block {
+        display: block;
+        width: 100%;
+
+        // Specificity overrides
+        input[type="submit"] &,
+        input[type="reset"] &,
+        input[type="button"] & {
+            width: 100%;
+        }
+    }
+
+    @include button-style(default);
+
+    &--secondary {
+        @include button-style(secondary);
+    }
+
+    &--inverted {
+        @include button-style(inverted);
+    }
+
+}

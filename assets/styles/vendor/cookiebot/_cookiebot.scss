@@ -1,0 +1,43 @@
+@if $cookiebot {
+    div#CybotCookiebotDialog {
+        #CybotCookiebotDialogBodyEdgeMoreDetails, #CybotCookiebotDialogHeader {
+            display: none !important;
+        }
+
+        @include media-breakpoint-down(lg) {
+            top: auto;
+            transform: none;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            max-width: none;
+            border-radius: 0;
+            #CybotCookiebotDialogHeader {
+                display: none;
+            }
+            *, #CybotCookiebotDialogBodyUnderlay * {
+                font-size: 12px;
+            }
+            #CybotCookiebotDialogBodyContentTitle {
+                font-size: 16px;
+            }
+            .CybotCookiebotDialogBodyBottomWrapper {
+                display: none;
+            }
+            #CybotCookiebotDialogPoweredByText {
+                display: none;
+            }
+            #CybotCookiebotDialogBodyButtonsWrapper {
+                flex-flow: row nowrap;
+
+                .CybotCookiebotDialogBodyButton {
+                    max-width: 50%;
+                    padding: 0.5em 1em;
+                    border: none;
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+/*******************
+Dependency overrides
+********************/
+
+// Font Awesome
+
+@use "sass:math";
+
+$fa-font-path:                '../fonts' !default;
+$fa-font-size-base:           var(--body__default__font-size--default) !default;
+$fa-border-color:             color-var(--global__colors__gray-light) !default;
+$fa-li-width:                 2em !default;
+$fa-fw-width:                 20em * 0.0625 !default;
+
+// Cookiebot
+$cookiebot: true;

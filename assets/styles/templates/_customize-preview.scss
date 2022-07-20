@@ -1,0 +1,29 @@
+$preview-elements: (
+    header-nav__menu: "Nav Menu",
+    header-nav__brand: "Brand Image",
+    header-nav__cta: "CTA",
+    footer-nav__section--1: "Footer Section 1",
+    footer-nav__section--2: "Footer Section 2",
+    footer-nav__section--3: "Footer Section 3",
+    content-section: "Section",
+    content-column: false
+
+);
+@each $key, $label in $preview-elements {
+    .customize-preview .#{$key} {
+        outline: 1px dotted;
+        outline-offset: 1px;
+        position: relative;
+
+        @if $label {
+            &:before {
+                content: $label;
+                position: absolute;
+                font-size: 10px;
+                bottom: .25em;
+                right: .5em;
+                opacity: 0.5;
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+.emphasis {
+    text-transform: uppercase;
+    &--primary {
+        color: color-var(--global__colors__primary, 1);
+    }
+    &--secondary {
+        color: color-var(--global__colors__secondary, 1);
+    }
+}

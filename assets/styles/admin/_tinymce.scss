@@ -1,0 +1,19 @@
+html {
+    font-size: var(--global__sizing__spacer-root--max, 15px);
+}
+body#tinymce {
+    margin: var(--global__sizing__layout-spacing--half, 15px) !important;
+}
+
+.mce-content-body a[data-mce-selected] {
+    box-shadow: 0 0 0 1px color-var(--global__colors__gray-light);
+    background-color: color-var(--global__colors__gray-light);
+
+    &.button {
+        border-radius: 0;
+        margin: 0;
+        padding: var(--global__sizing__text-spacing--half);
+        background-color: color-var(--global__colors__gray-light);
+    }
+}
+

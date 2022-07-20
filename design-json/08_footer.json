@@ -1,0 +1,94 @@
+{
+    "name": "footer",
+    "title": "Design: Footer",
+    "sections": {
+        "section-1": "Section 1",
+        "section-2": "Section 2",
+        "section-3": "Section 3"
+    },
+    "fields": {
+        "layout": {
+            "type": "markup",
+            "control-type": "radio",
+            "description": "How sections should be arranged on larger screens",
+            "default" : "vertical",
+            "choices": {
+                "vertical": "Vertically",
+                "horizontal": "Horizontally"
+            }
+        },
+        "padding-vertical": {
+            "default" : "global__sizing__layout-spacing--default",
+            "choices": {
+                "0": "None",
+                "global__sizing__layout-spacing--half": "Layout Spacing - Half",
+                "global__sizing__layout-spacing--default": "Layout Spacing - Default",
+                "global__sizing__layout-spacing--double": "Layout Spacing - Double"
+            }
+        },
+        "font-size": {
+            "type": "fluid-value",
+            "description": "Font size for all footer text",
+            "default": "14px",
+            "choices": {
+                "pixel-range": [12, 20, 2]
+            }
+        },
+        "color": {
+            "type": "color-selection",
+            "description": "Footer text color"
+        },
+        "background-color" : {
+            "type": "color-selection",
+            "default": "gray-lighter",
+            "description" : "The default background color of the footer"
+        },
+        "margin-bottom": {
+            "name": "margin-bottom",
+            "type": "markup",
+            "section" : ["section-1", "section-2", "section-3"],
+            "default" : "spacing-default",
+            "choices": {
+                "": "None",
+                "spacing-half": "Layout Spacing - Half",
+                "spacing-default": "Layout Spacing - Default",
+                "spacing-double": "Layout Spacing - Double"
+            }
+        },
+        "element-direction": {
+            "type": "markup",
+            "control-type": "radio",
+            "section" : ["section-1", "section-2", "section-3"],
+            "description": "What direction should elements flow",
+            "default" : "horizontal",
+            "choices": {
+                "horizontal": "Horizontally",
+                "vertical": "Vertically"
+            }
+        },
+        "element-alignment": {
+            "type": "markup",
+            "control-type": "radio",
+            "section" : ["section-1", "section-2", "section-3"],
+            "default" : "center",
+            "description" : "How the elements should be aligned",
+            "choices": {
+                "left": "Left",
+                "center": "Center",
+                "right": "Right"
+            }
+        },
+        "element-spacing": {
+            "type": "markup",
+            "section" : ["section-1", "section-2", "section-3"],
+            "default" : "spacing-default",
+            "description": "Spacing between elements in a section",
+            "choices": {
+                "": "None",
+                "spacing-half": "Layout Spacing - Half",
+                "spacing-default": "Layout Spacing - Default",
+                "spacing-double": "Layout Spacing - Double"
+            }
+        }
+    }
+}

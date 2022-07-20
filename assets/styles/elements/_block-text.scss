@@ -1,0 +1,133 @@
+@use "sass:math";
+
+@import '../common/variables', '../common/mixins';
+
+p {
+    margin-top: 0;
+}
+
+// Quotes/Blockquote
+
+%quote-open {
+    content: '\201C';
+    display: inline-block;
+    width: 0; //prevent orphaning on next line
+}
+
+%quote-close {
+    content: '\201D';
+    display: inline-block;
+    width: 0; //prevent orphaning on next line
+}
+
+q:before {
+    @extend %quote-open;
+}
+
+q:after {
+    @extend %quote-close;
+}
+
+blockquote {
+    @include heading-size(--block-text__block-quotes__size);
+    padding: 0 var(--block-text__block-quotes__horizontal-padding);
+    @include text-spacer;
+
+    p,
+    ul,
+    ol {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    > :first-child:before {
+        @extend %quote-open;
+        text-indent: (-1em * 2) * (1/3);
+    }
+    > :last-child:after {
+        @extend %quote-close;
+    }
+}
+
+.blockquote {
+    &__quote {
+        @include text-spacer;
+    }
+    &__caption {
+        padding: 0 var(--block-text__block-quotes__horizontal-padding);
+        font-weight: var(--block-text__block-quotes__caption-weight);
+        font-style: var(--block-text__block-quotes__caption-style);
+        .icon {
+            margin-right: 0.1em;
+        }
+
+    }
+    &__attribution {
+        &:before {
+            content: "\2014\00A0";
+            text-indent: -0.5em;
+            display: inline-block;
+        }
+    }
+    &--has-icon {
+        .blockquote__attribution {
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
+
+// Lists
+
+ul,
+ol,
+dl {
+    margin-top: 0;
+    padding-left: var(--block-text__lists__list-left-padding);
+    @include text-spacer;
+    ul,
+    ol,
+    dl {
+        margin-bottom: 0;
+    }
+}
+
+%list--unstyled,
+.list--unstyled {
+    @include list-unstyled;
+}
+
+%list--inline,
+.list--inline {
+    @include list-unstyled;
+
+    > li {
+        display: inline-block;
+        padding-left: var(--block-text__lists__item-inline-spacing-horizontal);
+        padding-right: var(--block-text__lists__item-inline-spacing-horizontal);
+
+        &:first-child {
+            padding-left: 0;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}
+
+.text {
+    &--small {
+        @include fluid-value-set(font-size, --body__small__font-size);
+    }
+    &--large {
+        @include fluid-value-set(font-size, --body__large__font-size);
+    }
+}
+
+dt {
+}
+dd {
+    margin-left: 0; // Undo browser default
+}

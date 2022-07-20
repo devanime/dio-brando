@@ -1,0 +1,126 @@
+{
+    "name": "header",
+    "title": "Design: Header",
+    "sections": {
+        "nav-menu": "Nav Menu",
+        "brand-image": "Brand Image",
+        "cta": "CTA"
+    },
+    "fields": {
+        "padding-vertical" : {
+            "section" : ["nav-menu", "brand-image", "cta"],
+            "default" : "global__sizing__layout-spacing--half",
+            "choices": {
+                "0": "None",
+                "global__sizing__layout-spacing--half": "Layout Spacing - Half",
+                "global__sizing__layout-spacing--default": "Layout Spacing - Default",
+                "global__sizing__layout-spacing--double": "Layout Spacing - Double"
+            }
+        },
+        "padding-horizontal": {
+            "section" : ["nav-menu", "brand-image", "cta"],
+            "default" : "global__sizing__layout-spacing--half",
+            "choices": {
+                "0": "None",
+                "global__sizing__layout-spacing--half": "Layout Spacing - Half",
+                "global__sizing__layout-spacing--default": "Layout Spacing - Default",
+                "global__sizing__layout-spacing--double": "Layout Spacing - Double"
+            }
+        },
+        "background-color" : {
+            "type": "color-selection",
+            "default": "gray-lighter",
+            "description" : "The default background color of the header bar"
+        },
+        "toggle-bar-width": {
+            "description": "Set the width of the toggle bars",
+            "section": "nav-menu",
+            "default": "30px",
+            "choices": {
+                "pixel-range": [24, 36, 2]
+            }
+        },
+        "toggle-bar-height": {
+            "description": "Set the height of the toggle bars",
+            "section": "nav-menu",
+            "default": "3px",
+            "choices": {
+                "pixel-range": [1, 5, 1]
+            }
+        },
+        "toggle-bar-radius": {
+            "description": "Set the border radius of the toggle bars. Use half-pixels for odd-numbered heights",
+            "section": "nav-menu",
+            "default": "1.5px",
+            "choices": {
+                "pixel-range": [0, 2.5, 0.5]
+            }
+        },
+        "toggle-bar-spacing": {
+            "description": "Set the vertical spacing between the toggle bars",
+            "section": "nav-menu",
+            "default": "8px",
+            "choices": {
+                "pixel-range": [5, 12, 1]
+            }
+        },
+        "toggle-bar-color": {
+            "type": "color-selection",
+            "section": "nav-menu",
+            "default": "global__body__color",
+            "description" : "Color of menu toggle bars"
+        },
+        "toggle-label-color": {
+            "type": "color-selection",
+            "section": "nav-menu",
+            "default": "global__body__color",
+            "description" : "Color of menu toggle label"
+        },
+        "toggle-label-transform": {
+            "section": "nav-menu",
+            "default": "inherit",
+            "description": "Text case of toggle label",
+            "choices": {
+                "inherit": "None",
+                "uppercase": "Uppercase"
+            }
+        },
+        "list-size": {
+            "type": "heading-size",
+            "description": "Set the font size for the nav menu list",
+            "default": "medium",
+            "section": "nav-menu"
+        },
+        "link-style": {
+            "type": "markup",
+            "section" : "cta",
+            "default" : "button",
+            "choices": {
+                "": "Plain Link",
+                "button": "Button - Default Style",
+                "button button--secondary": "Button - Secondary Style",
+                "button button--inverted": "Button - Inverted Style"
+            }
+        },
+        "overlay-bg": {
+            "type": "color-selection",
+            "default": "white",
+            "description": "Set the overlay background color",
+            "section": "nav-menu"
+        },
+        "overlay-color": {
+            "type": "color-selection",
+            "section": "nav-menu",
+            "default": "global__body__color",
+            "description": "Set the overlay color"
+        },
+        "sub-list-size": {
+            "section": "nav-menu",
+            "description": "Set the sub list size<br>(1em = 1x font size)",
+            "default": "0.8em",
+            "choices": {
+                "em-range": [0.5, 1, 0.1]
+            }
+        }
+    }
+}

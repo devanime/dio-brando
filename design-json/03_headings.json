@@ -1,0 +1,50 @@
+{
+    "name": "headings",
+    "title": "Design: Headings",
+    "sections": {
+        "default": "Size: Default",
+        "medium": "Size: Medium",
+        "large": "Size: Large",
+        "xlarge": "Size: X-Large"
+    },
+    "fields": {
+        "line-height": {
+            "description": "Default leading for all sizes",
+            "default": "inherit",
+            "choices": {
+                "range": [1, 1.5, 0.05],
+                "inherit": true
+            }
+        },
+        "weight": {
+            "description": "Default font weight for all heading sizes",
+            "default": "bold",
+            "choices": {
+                "inherit": "Normal",
+                "bold": "Bold"
+            }
+        },
+        "transform": {
+            "description": "Text case of toggle label",
+            "default": "inherit",
+            "choices": {
+                "inherit": "None",
+                "uppercase": "Uppercase"
+            }
+        },
+        "font-size": {
+            "type": "fluid-value",
+            "section": ["default", "medium", "large", "xlarge"],
+            "description": "Font size for heading",
+            "default": ["16px", "18px", "20px", "24px"],
+            "choices": {
+                "pixel-range": [16, 96, 2]
+            }
+        },
+        "color": {
+            "type": "color-selection",
+            "section": ["default", "medium", "large", "xlarge"],
+            "description": "Text color for heading"
+        }
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "name": "form-fields",
+    "title": "Design: Form Fields",
+    "sections": {
+        "label": "Element: Label",
+        "text-field": "Element: Text Inputs",
+        "select": "Element: Select",
+        "checked": "Element: Radio/Checkbox"
+    },
+    "fields": {
+        "font-size": {
+            "type": "fluid-value",
+            "description": "Font size for form fields",
+            "default": "16px",
+            "choices": {
+                "pixel-range": [16, 30, 2]
+            }
+        },
+        "color": {
+            "type": "color-selection",
+            "description": "Form field text color"
+        },
+        "background-color": {
+            "type": "color-selection",
+            "description": "Set the background color for all text input fields",
+            "default": "global__body__color-inverted"
+        },
+        "padding-vertical": {
+            "description": "Vertical spacing inside form field<br>(1em = 1x font size)",
+            "default": "0.5em",
+            "choices": {
+                "em-range": [0.25, 2, 0.25]
+            }
+        },
+        "padding-horizontal": {
+            "description": "Horizontal spacing inside form field<br>(1em = 1x font size)",
+            "default": "1em",
+            "choices": {
+                "em-range": [0.25, 2, 0.25]
+            }
+        },
+        "field-spacing": {
+            "description": "Spacing around form fields<br>(1em = 1x font size)",
+            "default": "0.5em",
+            "choices": {
+                "em-range": [0.25, 2, 0.25]
+            }
+        },
+        "border": {
+            "type": "border",
+            "default": {
+                "color": "gray-light",
+                "width": "1px"
+            }
+        },
+        "size": {
+            "section": "checked",
+            "description": "Height/Width for checkboxes and radio input<br>(1em = 1x font size)",
+            "default": "1em",
+            "choices": {
+                "em-range": [1, 1.5, 0.1]
+            }
+        },
+        "background-checked": {
+            "type": "color-selection",
+            "section": "checked",
+            "default": "global__colors__gray-light",
+            "description": "Radio/Checkbox background color for checked state"
+        },
+        "vertical-spacing": {
+            "description": "Set the spacing beneath each form element",
+            "section": "checked",
+            "default": "0px",
+            "choices": {
+                "pixel-range": [0, 5, 1]
+            }
+        },
+        "label-size": {
+            "description": "Set the font size for form labels",
+            "default": "16px",
+            "section": "label",
+            "choices": {
+                "pixel-range": [16, 20, 2]
+            }
+        },
+        "weight": {
+            "type": "radio",
+            "description": "Set the font weight for form labels",
+            "default": "400",
+            "section": "label",
+            "choices": {
+                "400": "Normal",
+                "700": "Bold"
+            }
+        }
+    }
+}

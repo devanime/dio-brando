@@ -1,0 +1,40 @@
+@import '../common/variables', '../common/mixins';
+
+%heading,
+.heading {
+    font-size: inherit;
+    font-family: $font-family-headings;
+    font-weight: var(--headings__common__weight);
+    color: inherit;
+    margin-top: 0;
+    line-height: var(--headings__common__line-height);
+    text-transform: var(--headings__common__transform);
+
+    small {
+        font-size: 75%;
+        font-weight: normal;
+        line-height: 1
+    }
+
+    > a {
+        color: inherit;
+        &:hover {
+            color: color-var(--global__links__color);
+        }
+    }
+
+
+    @each $modifier, $var-base in $heading-sizes {
+        &--#{$modifier} {
+            @include heading-size($var-base);
+        }
+    }
+    &--spacing {
+       @include text-spacer;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @extend %heading;
+    @include text-spacer;
+}

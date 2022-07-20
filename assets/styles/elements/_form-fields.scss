@@ -1,0 +1,265 @@
+// Form Fields: WIP!
+
+input,
+select,
+textarea {
+    @include fluid-value-set(font-size, --form-fields__common__font-size);
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    margin: 0;
+    color: color-var(--form-fields__common__color);
+}
+
+// IE FIX
+select {
+    &::-ms-expand {
+        display: none;
+    }
+}
+
+// Cancels out browser offset
+legend {
+    float: left;
+    width: 100%;
+
+    + * {
+        clear: left;
+    }
+}
+
+@mixin placeholder-color() {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-ms-placeholder {
+        @content;
+    }
+    &::placeholder {
+        @content;
+    }
+}
+
+%input-text {
+    @include border(--form-fields__common__border);
+    background-color: color-var(--form-fields__common__background-color);
+    padding: var(--form-fields__common__padding-vertical) var(--form-fields__common__padding-horizontal);
+
+    @include placeholder-color() {
+        color: color-var(--form-fields__common__color);
+        opacity: 0.5;
+    }
+}
+
+%input-checked {
+    vertical-align: middle;
+    @include border(--form-fields__common__border);
+    width: var(--form-fields__checked__size);
+    height: var(--form-fields__checked__size);
+
+    &:checked {
+        background: color-var(--form-fields__checked__background-checked);
+    }
+}
+
+%inline-label {
+    display: inline;
+    margin: 0;
+    padding: 0 0 0 0.5em;
+    line-height: 1;
+    text-align: left;
+    vertical-align: middle;
+    color: color-var(--form-fields__common__color);
+}
+
+@mixin text-inputs() {
+    &[type='date'],
+    &[type='datetime-local'],
+    &[type='email'],
+    &[type='number'],
+    &[type='password'],
+    &[type='search'],
+    &[type='tel'],
+    &[type='text'],
+    &[type='time'],
+    &[type='url'] {
+        @content;
+    }
+}
+
+input {
+    @include text-inputs {
+        @extend %input-text;
+    }
+
+    &[type='checkbox'] {
+        @extend %input-checked;
+
+        + label {
+            @include fluid-value-set(font-size, --form-fields__common__font-size);
+            @extend %inline-label;
+        }
+    }
+
+    &[type='radio'] {
+        @extend %input-checked;
+        border-radius: 50%;
+
+        + label {
+            @include fluid-value-set(font-size, --form-fields__common__font-size);
+            @extend %inline-label;
+        }
+    }
+
+    &[type='submit'],
+    &[type='button'],
+    &[type='reset']{
+        @extend %button;
+        width: auto;
+    }
+    &[type='reset'] {
+        @extend %button--secondary;
+    }
+}
+
+textarea {
+    @extend %input-text;
+    resize: none;
+    height: 8em;
+}
+
+select {
+    @extend %input-text;
+
+    &[multiple]:focus option:checked {
+        background: color-var(--form-fields__common__color) linear-gradient(0deg, color-var(--form-fields__common__color) 0%, color-var(--form-fields__common__color) 100%);
+    }
+}
+
+/* Gravity Forms */
+
+.gform_heading {
+    margin-bottom: var(--form-fields__common__field-spacing);
+}
+
+.gform_title {
+    @extend .heading--large;
+    margin-bottom: 0;
+}
+
+.gform_wrapper {
+    ul {
+        @include list-unstyled;
+    }
+    input {
+        @include text-inputs {
+            width: 100%;
+        }
+    }
+    textarea,
+    select {
+        width: 100%;
+    }
+    .gfield {
+        margin-bottom: var(--form-fields__common__field-spacing);
+        .instruction,
+        &_label {
+            font-size: var(--form-fields__label__label-size);
+            font-weight: var(--form-fields__label__weight);
+        }
+        &_radio,
+        &_checkbox {
+            > li {
+                margin-bottom: var(--form-fields__checked__vertical-spacing);
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &_time_hour input + i {
+            display: none;
+        }
+    }
+    .gform_validation_container {
+        display: none !important;
+        position: absolute !important;
+        left: -9000px;
+    }
+    .ginput {
+        &_complex {
+            display: flex;
+            flex-flow: row wrap;
+            width: 100%;
+            @include media-breakpoint-up(sm){
+                flex-flow: row nowrap;
+            }
+            > span {
+                display: flex;
+                flex-flow: column;
+                width: inherit;
+                margin-bottom: var(--form-fields__common__field-spacing);
+                @include media-breakpoint-up(sm){
+                    margin-right: var(--form-fields__common__field-spacing);
+                    margin-bottom: 0;
+                }
+
+                &:first-of-type {
+                    margin-left: 0;
+                }
+                &:last-of-type {
+                    margin-right: 0;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &_container_select select {
+            background-image: url(./images/svg-sprite/icon-arrow.svg);
+            background-repeat: no-repeat;
+            background-position: center right 1em;
+            background-size: 0.75em;
+        }
+        &_recaptcha {
+            margin: var(--global__sizing__text-spacing--default) 0;
+        }
+    }
+    .validation_error {
+        color: color-var(--global__colors__secondary);
+        padding-left: var(--global__sizing__text-spacing--default);
+        @include text-spacer;
+    }
+    .validation_message {
+        color: color-var(--global__colors__secondary);
+    }
+    input.datepicker {
+        width: auto;
+        &_with_icon {
+            margin-right: 0.5em;
+        }
+    }
+    .top_label .hidden_label .gfield_label,
+    .hidden_label .ginput_complex.ginput_container label {
+        @extend .sr-only;
+    }
+    .clear-multi {
+        display: flex;
+
+        > div {
+            margin-left: var(--global__sizing__text-spacing--default);
+            margin-right: var(--global__sizing__text-spacing--default);
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+

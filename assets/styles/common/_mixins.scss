@@ -1,0 +1,59 @@
+@mixin heading-size($var-base) {
+    @include fluid-value-set(font-size, $var-base + '__font-size');
+    color: color-var($var-base + '__color');
+    line-height: var(--headings__common__line-height);
+    text-transform: var(--headings__common__transform);
+    font-weight: var(--headings__common__weight);
+}
+
+@mixin button-style($style: default) {
+    $var-base: --buttons__ + $style + __;
+    color: color-var($var-base + 'color');
+    background-color: color-var($var-base + 'background');
+    &:hover {
+        color: color-var($var-base + 'color-hover');
+        background-color: color-var($var-base + 'background-hover');
+    }
+    &:active {
+        color: color-var($var-base + 'color-hover');
+        background-color: color-var($var-base + 'background-hover');
+    }
+}
+
+@mixin border($var-base) {
+    border-width: var($var-base + '--width');
+    border-style: solid;
+    border-color: color-var($var-base + '--color');
+    border-radius: var($var-base + '--radius');
+}
+
+@mixin text-spacer($size: default) {
+    margin-bottom: var(--global__sizing__text-spacing-- + $size);
+}
+
+@mixin fluid-value-set($properties, $var-base) {
+    $min-val: var($var-base + '--default');
+    $max-val: var($var-base + '--max');
+    $val-diff: var($var-base + '--diff');
+    $min-vw: $fluid-val-min-vw;
+    $max-vw: $fluid-val-max-vw;
+
+    & {
+        @each $prop in $properties {
+            #{$prop}: $min-val;
+        }
+
+        @if $min-val != $max-val {
+            @media screen and (min-width: $min-vw) and (max-width: $max-vw - 1) {
+                @each $prop in $properties {
+                    #{$prop}: calc(#{$min-val} + #{$val-diff} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+                }
+            }
+            @media screen and (min-width: $max-vw) {
+                @each $prop in $properties {
+                    #{$prop}: $max-val;
+                }
+            }
+        }
+    }
+}

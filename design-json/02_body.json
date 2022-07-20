@@ -1,0 +1,20 @@
+{
+    "name": "body",
+    "title": "Design: Body",
+    "sections": {
+        "default": "Size: Default",
+        "small": "Size: Small",
+        "large": "Size: Large"
+    },
+    "fields": {
+        "font-size": {
+            "type": "fluid-value",
+            "section": ["default", "small", "large"],
+            "description": "Font size for body",
+            "default": ["16px", "12px", "20px"],
+            "choices": {
+                "pixel-range": [12, 30, 1]
+            }
+        }
+    }
+}

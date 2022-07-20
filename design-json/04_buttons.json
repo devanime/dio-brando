@@ -1,0 +1,60 @@
+{
+    "name": "buttons",
+    "title": "Design: Buttons",
+    "sections": {
+        "default": "Style: Default",
+        "secondary": "Style: Secondary",
+        "inverted": "Style: Inverted"
+    },
+    "fields": {
+        "font-size": {
+            "type": "fluid-value",
+            "description": "Font size for buttons",
+            "default": "16px",
+            "choices": {
+                "pixel-range": [14, 32, 2]
+            }
+        },
+        "padding-vertical": {
+            "description": "Vertical spacing around button text<br>(1em = 1x font size)",
+            "default": "0.5em",
+            "choices": {
+                "em-range": [0.25, 2, 0.25]
+            }
+        },
+        "padding-horizontal": {
+            "description": "Horizontal spacing around button text<br>(1em = 1x font size)",
+            "default": "1em",
+            "choices": {
+                "em-range": [0.25, 2, 0.25]
+            }
+        },
+        "border": {
+            "type": "border"
+        },
+        "color": {
+            "type": "color-selection",
+            "section": ["default", "secondary", "inverted"],
+            "description": "Button text color",
+            "default": ["global__body__color-inverted", "global__body__color-inverted", "global__body__color"]
+        },
+        "color-hover": {
+            "type": "color-selection",
+            "section": ["default", "secondary", "inverted"],
+            "description": "Button text color in mouse hover",
+            "default": ["global__body__color-inverted", "global__body__color-inverted", "global__body__color"]
+        },
+        "background": {
+            "type": "color-selection",
+            "section": ["default", "secondary", "inverted"],
+            "description": "Button background color",
+            "default": ["primary", "secondary", "gray-lighter"]
+        },
+        "background-hover": {
+            "type": "color-selection",
+            "section": ["default", "secondary", "inverted"],
+            "description": "Button background color on mouse hover",
+            "default": ["primary-dark", "secondary-dark", "gray-light"]
+        }
+    }
+}

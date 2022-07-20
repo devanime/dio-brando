@@ -1,0 +1,17 @@
+.nav-menu {
+    &__toggle-label {
+        color: color-var(--header__nav-menu__toggle-label-color);
+        display: none;
+        @include media-breakpoint-up(sm){
+            display: block;
+        }
+    }
+
+    &__list {
+        @include heading-size(--header__nav-menu__list-size);
+
+        a {
+            text-decoration: none;
+        }
+    }
+}

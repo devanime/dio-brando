@@ -1,0 +1,8 @@
+.content-section {
+    &:first-child {
+        &:not(.content-section--has-bg) {
+            margin-top: $first-section-margin-top;
+        }
+    }
+
+}

@@ -1,0 +1,95 @@
+.footer-nav {
+    background-color: color-var(--footer__common__background-color);
+    color: color-var(--footer__common__color);
+    @include fluid-value-set(font-size, --footer__common__font-size);
+
+    &__sections {
+        margin: 0 auto;
+        padding: var(--footer__common__padding-vertical) 0;
+        max-width: $container-max-width;
+        display: flex;
+        flex-flow: row wrap;
+        &--vertical {
+
+        }
+    }
+
+    &__section {
+        padding-left: $grid-gutter-width-half;
+        padding-right: $grid-gutter-width-half;
+        overflow: hidden;
+        &--spacing-default {
+            margin-bottom: var(--global__sizing__layout-spacing--default);
+        }
+        &--spacing-double {
+            margin-bottom: var(--global__sizing__layout-spacing--double);
+        }
+        &--spacing-half {
+            margin-bottom: var(--global__sizing__layout-spacing--half);
+        }
+        &:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        .footer-nav__sections--vertical & {
+            flex-basis: 100%;
+        }
+
+        &--element-spacing-default .footer-nav {
+            &__section-inner {
+                margin: negate-var(--global__sizing__layout-spacing--half);
+            }
+            &__element {
+                padding: var(--global__sizing__layout-spacing--half);
+            }
+        }
+
+        &--element-spacing-double .footer-nav {
+            &__section-inner {
+                margin: negate-var(--global__sizing__layout-spacing--default);
+            }
+            &__element {
+                padding: var(--global__sizing__layout-spacing--default);
+            }
+        }
+        &--element-spacing-half .footer-nav {
+            &__section-inner {
+                margin: negate-var(--global__sizing__layout-spacing--quarter);
+            }
+            &__element {
+                padding: var(--global__sizing__layout-spacing--quarter);
+            }
+        }
+    }
+
+    &__section-inner {
+        flex: 1 1 auto;
+        display: flex;
+        flex-flow: row wrap;
+        .footer-nav__section--element-horizontal & {
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer-nav__section--element-center & {
+            justify-content: center;
+            text-align: center;
+        }
+        .footer-nav__section--element-right & {
+            justify-content: flex-end;
+            text-align: right;
+        }
+        .footer-nav__section--full-width & {
+            flex-basis: 100%;
+        }
+    }
+
+    &__element {
+        &:last-child,
+        > :last-child {
+            margin-bottom: 0 !important;
+        }
+        .footer-nav__section--element-vertical & {
+            flex-basis: 100%;
+        }
+    }
+}

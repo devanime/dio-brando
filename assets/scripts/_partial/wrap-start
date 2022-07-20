@@ -1,0 +1,3 @@
+/* jshint ignore:start */
+(function (dataLayer, Estarossa, _, $, window, document) {
+/* jshint ignore:end */

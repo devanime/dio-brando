@@ -1,0 +1,51 @@
+{
+    "name": "@devanime/dio-brando",
+    "version": "1.0.0",
+    "description": "Parent theme to include customizer options",
+    "repository": "git@github.com:devanime/DioBrando.git",
+    "author": "DevAnime <devanimecards@gmail.com>",
+    "homepage": "https://www.devanimecards.io",
+    "private": true,
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://opensource.org/licenses/MIT"
+        }
+    ],
+    "main": "assets/scripts/main.js",
+    "files": [
+        "assets/scripts/common/*",
+        "assets/scripts/components/*",
+        "assets/styles/*",
+        "assets/images/*"
+    ],
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "~5.7.1",
+        "owl.carousel": "^2.3.4",
+        "jquery-address": "^1.6.0",
+        "@devanime/roronoa-zoro": "file:../../plugins/roronoa-zoro/assets",
+        "@devanime/estarossa.common": "file:../../plugins/estarossa/common",
+        "@devanime/estarossa.util": "file:../../plugins/estarossa/util",
+        "@devanime/estarossa.directives.accessibility": "file:../../plugins/estarossa/directives/accessibility",
+        "@devanime/estarossa.directives.owl-a11y": "file:../../plugins/estarossa/directives/owl-a11y",
+        "@devanime/estarossa.directives.sticky-header": "file:../../plugins/estarossa/directives/sticky-header",
+        "@devanime/estarossa.directives.toggle": "file:../../plugins/estarossa/directives/toggle",
+        "@devanime/estarossa.nav-menu": "file:../../plugins/estarossa/nav-menu",
+        "@devanime/estarossa.modal": "file:../../plugins/estarossa/modal",
+        "@devanime/estarossa.social-icons": "file:../../plugins/estarossa/social-icons",
+        "@devanime/estarossa.video": "file:../../plugins/estarossa/video",
+        "@devanime/estarossa.tag-manager": "file:../../plugins/estarossa/tag-manager",
+        "@devanime/estarossa.read-more": "file:../../plugins/estarossa/read-more",
+        "@devanime/estarossa.accordion": "file:../../plugins/estarossa/accordion",
+        "@devanime/estarossa.sub-nav": "file:../../plugins/estarossa/sub-nav",
+        "@devanime/estarossa.filters": "file:../../plugins/estarossa/filters",
+        "@devanime/estarossa.media-carousel": "file:../../plugins/estarossa/media-carousel",
+        "@devanime/estarossa.content-slider": "file:../../plugins/estarossa/content-slider",
+        "@devanime/estarossa.responsive-picture": "file:../../plugins/estarossa/responsive-picture",
+        "@devanime/estarossa.lazy-image": "file:../../plugins/estarossa/lazy-image",
+        "@devanime/estarossa.talent": "file:../../plugins/estarossa/talent",
+        "@devanime/estarossa.faq": "file:../../plugins/estarossa/faq",
+        "@devanime/estarossa.message": "file:../../plugins/estarossa/message",
+        "@devanime/estarossa.stream-selector": "file:../../plugins/stream-selector"
+    }
+}

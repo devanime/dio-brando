@@ -1,0 +1,34 @@
+{
+    "name": "dio-brando",
+    "homepage": "https://www.devanimecards.io",
+    "authors": [
+        "DevAnime <devanimecards@gmail.com>"
+    ],
+    "license": "MIT",
+    "private": true,
+    "main": [
+        "styles/main.scss"
+    ],
+    "dependencies": {
+        "font-awesome": "~5.7.1",
+        "estarossa.directives.accessibility": "../../plugins/estarossa/directives/accessibility",
+        "estarossa.directives.sticky-header": "../../plugins/estarossa/directives/sticky-header",
+        "estarossa.directives.toggle": "../../plugins/estarossa/directives/toggle",
+        "estarossa.nav-menu": "../../plugins/estarossa/nav-menu",
+        "estarossa.modal": "../../plugins/estarossa/modal",
+        "estarossa.lazy-image": "../../plugins/estarossa/lazy-image",
+        "estarossa.social-icons": "../../plugins/estarossa/social-icons",
+        "estarossa.video": "../../plugins/estarossa/video",
+        "estarossa.tag-manager": "../../plugins/estarossa/tag-manager",
+        "estarossa.sub-nav": "../../plugins/estarossa/sub-nav",
+        "estarossa.responsive-picture": "../../plugins/estarossa/responsive-picture",
+        "estarossa.talent": "../../plugins/estarossa/talent",
+        "estarossa.faq": "../../plugins/estarossa/faq",
+        "estarossa.stream-selector": "../../plugins/stream-selector",
+        "estarossa.media-carousel": "../../plugins/estarossa/media-carousel",
+        "estarossa.content-slider": "../../plugins/estarossa/content-slider",
+        "estarossa.message": "../../plugins/estarossa/message",
+        "estarossa.read-more": "../../plugins/estarossa/read-more",
+        "roronoa-zoro": "../../plugins/roronoa-zoro/assets"
+    }
+}

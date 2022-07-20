@@ -1,0 +1,26 @@
+{
+    "name": "devanime/dio-brando",
+    "type": "wordpress-theme",
+    "description": "Parent theme for new site builds.",
+    "authors": [
+        {
+            "name": "DevAnime",
+            "email": "devanimecards@gmail.com",
+            "homepage": "https://www.devanimecards.io"
+        },
+        {
+            "name": "DevAnime",
+            "email": "devanimecards@gmail.com",
+            "homepage": "https://www.devanimecards.io"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DioBrando\\": "lib/"
+        }
+    },
+    "require": {
+        "php": ">=7.2",
+        "composer/installers": "~1.0"
+    }
+}
