@@ -1,7 +1,7 @@
 {
     "name": "devanime/dio-brando",
     "type": "wordpress-theme",
-    "description": "Parent theme for new site builds.",
+    "description": "The parent theme used to start all new website builds.",
     "authors": [
         {
             "name": "DevAnime",
