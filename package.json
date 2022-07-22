@@ -45,7 +45,6 @@
         "@devanime/estarossa.lazy-image": "file:../../plugins/estarossa/lazy-image",
         "@devanime/estarossa.talent": "file:../../plugins/estarossa/talent",
         "@devanime/estarossa.faq": "file:../../plugins/estarossa/faq",
-        "@devanime/estarossa.message": "file:../../plugins/estarossa/message",
-        "@devanime/estarossa.stream-selector": "file:../../plugins/stream-selector"
+        "@devanime/estarossa.message": "file:../../plugins/estarossa/message"
     }
 }
