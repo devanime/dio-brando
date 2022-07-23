@@ -76,7 +76,7 @@ class CustomizeFactory
 
     protected function createField(string $key, array $field_config)
     {
-        $class_map = apply_filters('meliodas/design-producers/field-type-classes', static::$field_class_map);
+        $class_map = apply_filters('devanime/design-producers/field-type-classes', static::$field_class_map);
         $field_class = $class_map[$field_config['type'] ?? 'default'] ?? $class_map['default'];
         if (!empty($field_config['choices'])) {
             $choices = $this->createChoices($field_config['choices']);
@@ -92,7 +92,7 @@ class CustomizeFactory
 
     protected function createChoices(array $choices_config): CustomizeChoices
     {
-        $choices_factory_map = apply_filters('meliodas/design-producers/choices-factory',  static::$choices_factory_map);
+        $choices_factory_map = apply_filters('devanime/design-producers/choices-factory',  static::$choices_factory_map);
         $factory_method = $choices_factory_map['default'];
         $factory_args = [$choices_config];
         foreach (array_keys($choices_config) as $key) {

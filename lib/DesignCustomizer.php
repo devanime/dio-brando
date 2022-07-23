@@ -21,7 +21,7 @@ class DesignCustomizer
     public function __construct()
     {
 
-        add_filter('meliodas/config_registration_types', function ($types) {
+        add_filter('devanime/config_registration_types', function ($types) {
             $types['design_files'] = 'dio-brando/design_config_files';
             return $types;
         });
